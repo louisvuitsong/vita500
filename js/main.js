@@ -10,9 +10,9 @@ $(function(){
     });
 
     $('section article').on('click',function(e){
-        $('.copy').slideToggle();
+        if(e.originalEvent.target.className != 'pop_view')$('.copy').slideToggle();
     });
-
+    
     $('.pop_view').on('click',function(){
         $('.popup').addClass('active');
     });
